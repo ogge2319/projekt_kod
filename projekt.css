@@ -1,0 +1,25 @@
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+#buttonPanel {
+    position: absolute;
+    top: 27px;
+    left: 90px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 10; 
+}
+.panelButton {
+    background: url('bilder/Kanot.png') no-repeat;
+    background-size: contain;
+    border: none;
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer;
+    margin-right: 5px;
+}
