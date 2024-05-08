@@ -13,26 +13,29 @@ require([
         zoom: 6
     });
 
+    // Funktion för att lägga till en anpassad bildmarkör på kartan
+    function addCustomMarker(lat, lon, name) {
+        var point = new Point(lon, lat);
+
+        var symbol = new PictureMarkerSymbol({
+            "url": "bilder/pinpoint.png",
+            "width": 40,
+            "height": 20
+        });
+
+        var graphic = new Graphic(point, symbol);
+        graphic.setAttributes({ "name": name });
+
+        map.graphics.add(graphic);
+    }
+
     map.on("load", function () {
-        // Function to add a custom image marker to the map
-        function addCustomMarker(lat, lon, name) {
-            var point = new Point(lon, lat);
-
-            // Create a PictureMarkerSymbol with the URL of your image, width, and height
-            var symbol = new PictureMarkerSymbol({
-                "url": "bilder/pinpoint.png",
-                "width": 40,
-                "height": 20
-            });
-
-            // Create a graphic with the point and the symbol
-            var graphic = new Graphic(point, symbol);
-            graphic.setAttributes({ "name": name });
-
-            // Add the graphic to the map
-            map.graphics.add(graphic);
-        }
-
+        // Lägger till en klickhändelse för att lägga till markörer
+        map.on("click", function (evt) {
+            var latitude = evt.mapPoint.getLatitude();
+            var longitude = evt.mapPoint.getLongitude();
+            addCustomMarker(latitude, longitude, "Anpassad plats");
+        });
         //Färnebofjärden POI
         addCustomMarker(60.14311, 16.48877, "Bårbyhällan");
         addCustomMarker(60.10663, 16.48095, "Båtsportklubben");
@@ -55,16 +58,14 @@ require([
         addCustomMarker(60.15225, 16.47666, "Ista");
         addCustomMarker(60.15747, 16.48537, "Karlhomen");
 
-        //Hedesundafjärden POI
+        //Hedesundafjärden POI Norra Sundet, Södra
         addCustomMarker(60.21955, 17.19380, "Åshuvudet");
         addCustomMarker(60.19891, 17.12910, "Festplatsen");
         addCustomMarker(60.20745, 17.34060, "Gnupe");
         addCustomMarker(60.17909, 17.22200, "Hade");
         addCustomMarker(60.19183, 17.19460, "Korsnäset");
         addCustomMarker(60.22312, 17.28120, "Kvillanudden");
-        addCustomMarker(60.22302, 0.00000, "Norra Sundet");
         addCustomMarker(60.22987, 17.57010, "Östveda");
         addCustomMarker(60.21013, 17.19190, "Sandsnäsbadet");
-        addCustomMarker(60.18720, 17.22390, "Södra Sundet");
     });
 });
