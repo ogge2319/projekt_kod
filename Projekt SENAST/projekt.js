@@ -222,10 +222,11 @@ require([
             const lng = post.lon;
 			const namn = post.name;
             var p = new Point(lng, lat);
-            var graphic = new Graphic(p, symbol, name);
+            var graphic = new Graphic(p, symbol);
 
             var info = new InfoTemplate();
-            info.setTitle("Biking/Hiking with no elevation");
+            info.setTitle("Färnebofjärden");
+			info.setContent(namn);
             graphic.setInfoTemplate(info);
             farnebofjardenPOILayer.add(graphic);
         });
@@ -259,10 +260,11 @@ require([
             const lng = post.lon;
 			const namn = post.name;
             var p = new Point(lng, lat);
-            var graphic = new Graphic(p, symbol, name);
+            var graphic = new Graphic(p, symbol);
 
             var info = new InfoTemplate();
-            info.setTitle("Biking/Hiking with no elevation");
+            info.setTitle("Gysinge");
+			info.setContent(namn);
             graphic.setInfoTemplate(info);
             gysingePOILayer.add(graphic);
         });
@@ -295,11 +297,12 @@ require([
             const lng = post.lon;
 			const namn = post.name;
             var p = new Point(lng, lat);
-            var graphic = new Graphic(p, symbol, name);
+            var graphic = new Graphic(p, symbol);
 
             var info = new InfoTemplate();
-            info.setTitle("Biking/Hiking with no elevation");
-            graphic.setInfoTemplate(info);
+            info.setTitle("Hedesundafjärden");
+			info.setContent(namn);
+            graphic.setInfoTemplate(info);			
             hedesundafjardenPOILayer.add(graphic);
         });
     }
