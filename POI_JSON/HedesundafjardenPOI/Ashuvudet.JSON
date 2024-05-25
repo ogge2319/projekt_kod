@@ -3,52 +3,72 @@
         {
             "lat": "60.21955",
             "lon": "17.1938",
-            "name": "Åshuvudet"
+            "name": "Åshuvudet",
+            "image": "ashuvudet.png",
+            "description": "A quaint little village."
         },
         {
             "lat": "60.19891",
             "lon": "17.1291",
-            "name": "Festplatsen"
+            "name": "Festplatsen",
+            "image": "festplatsen.png",
+            "description": "A popular festival spot."
         },
         {
             "lat": "60.20745",
             "lon": "17.3406",
-            "name": "Gnupe"
+            "name": "Gnupe",
+            "image": "gnupe.png",
+            "description": "A great place for a hike."
         },
         {
             "lat": "60.17909",
             "lon": "17.222",
-            "name": "Hade"
+            "name": "Hade",
+            "image": "hade.png",
+            "description": "A serene lakeside location."
         },
         {
             "lat": "60.19183",
             "lon": "17.1946",
-            "name": "Korsnäset"
+            "name": "Korsnäset",
+            "image": "korsnaset.png",
+            "description": "A lovely area for bird watching."
         },
         {
             "lat": "60.22312",
             "lon": "17.2812",
-            "name": "Kvillanudden"
+            "name": "Kvillanudden",
+            "image": "kvillanudden.png",
+            "description": "A perfect picnic spot."
         },
         {
             "lat": "60.22302",
-            "lon": "0",
-            "name": "Norra Sundet"
+            "lon": "17.0000",
+            "name": "Norra Sundet",
+            "image": "norrasundet.png",
+            "description": "A beautiful northern bay."
         },
         {
             "lat": "60.22987",
             "lon": "17.5701",
-            "name": "Östveda"
+            "name": "Östveda",
+            "image": "ostveda.png",
+            "description": "A historic site with stunning views."
         },
         {
             "lat": "60.21013",
             "lon": "17.1919",
-            "name": "Sandsnäsbadet"
+            "name": "Sandsnäsbadet",
+            "image": "sandsnasbadet.png",
+            "description": "A popular swimming spot."
         },
         {
             "lat": "60.1872",
             "lon": "17.2239",
-            "name": "Södra Sundet"
+            "name": "Södra Sundet",
+            "image": "sodrasundet.png",
+            "description": "A scenic southern bay."
         }
     ]
 }
