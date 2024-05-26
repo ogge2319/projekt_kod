@@ -21,7 +21,7 @@ require([
         zoom: 6
     });
 
-    // Initialize the layers
+    // Initiera alla lager
     postsLayer = new GraphicsLayer();
     slingaLayer = new GraphicsLayer();
     infoLayer = new GraphicsLayer();
@@ -36,7 +36,7 @@ require([
     map.addLayer(gysingePOILayer);
     map.addLayer(hedesundafjardenPOILayer);
 
-    // Hide all layers initially
+    // Göm alla lager i början
     postsLayer.hide();
     slingaLayer.hide();
     infoLayer.hide();
@@ -44,14 +44,14 @@ require([
     gysingePOILayer.hide();
     hedesundafjardenPOILayer.hide();
 
-    // Clear markers
+    // Rensa alla markörer
     function clearMarkers() {
         for (var areaKey in areaLayers) {
-            areaLayers[areaKey].clear(); // Clear all markers
+            areaLayers[areaKey].clear(); 
         }
     }
 
-    // Biking and Hiking without elevation
+    // Cykling och vandring utan elevation
     async function fetchData(file) {
         const url = "https://raw.githubusercontent.com/ogge2319/projekt_kod/main/Biking_walking_no_elevation/";
         const response = await fetch(url + file);
@@ -59,7 +59,7 @@ require([
     }
 
     function getPostsData() {
-        clearMarkers(); // Clear existing markers
+        clearMarkers(); 
         postsLayer.clear();
         postsLayer.show();
         slingaLayer.hide();
@@ -105,7 +105,7 @@ require([
     }
 
     function getPostsSlinga() {
-        clearMarkers(); // Clear existing markers
+        clearMarkers(); 
         slingaLayer.clear();
         slingaLayer.show();
         postsLayer.hide();
@@ -145,7 +145,7 @@ require([
         slingaLayer.add(graphic);
     }
 
-    // Biking and Hiking with elevation
+    // Cykling och vandring med elevation 
     async function fetchInfo(file) {
         const url = "https://raw.githubusercontent.com/ogge2319/projekt_kod/main/biking_walking_with_elevation/";
         const response = await fetch(url + file);
@@ -153,7 +153,7 @@ require([
     }
 
     function getPostsInfo() {
-        clearMarkers(); // Clear existing markers
+        clearMarkers(); 
         infoLayer.clear();
         infoLayer.show();
         postsLayer.hide();
@@ -192,7 +192,7 @@ require([
         infoLayer.add(graphic);
     }
 
-    //FarnebofjardenPOI
+    //FärnebofjärdenPOI
     async function fetchFarnebofjardenPOI(file) {
         const url = "https://raw.githubusercontent.com/ogge2319/projekt_kod/main/POI_JSON/FarnebofjardenPOI/";
         const response = await fetch(url + file);
@@ -200,7 +200,7 @@ require([
     }
 
     function getPostsFarnebofjardenPOI() {
-        clearMarkers(); // Clear existing markers
+        clearMarkers(); 
         farnebofjardenPOILayer.clear();
         farnebofjardenPOILayer.show();
         postsLayer.hide();
@@ -252,7 +252,7 @@ require([
                 case "Strångnäs":
                     iconUrl = "bathPlace.png";
                     break;
-                // Lägg till fler fall för andra POI-namn här
+                
                 default:
                     iconUrl = "default.png";
                     break;
@@ -286,7 +286,7 @@ require([
     }
 
     function getPostsGysingePOI() {
-        clearMarkers(); // Clear existing markers
+        clearMarkers();
         gysingePOILayer.clear();
         gysingePOILayer.show();
         postsLayer.hide();
@@ -344,7 +344,7 @@ require([
 
 
 
-    //HedesundafjardenPOI
+    //HedesundafjärdenPOI
     async function fetchHedesundafjardenPOI(file) {
         const url = "https://raw.githubusercontent.com/ogge2319/projekt_kod/main/POI_JSON/HedesundafjardenPOI/";
         const response = await fetch(url + file);
@@ -352,7 +352,7 @@ require([
     }
 
     function getPostsHedesundafjardenPOI() {
-        clearMarkers(); // Clear existing markers
+        clearMarkers(); 
         hedesundafjardenPOILayer.clear();
         hedesundafjardenPOILayer.show();
         postsLayer.hide();
@@ -418,14 +418,13 @@ require([
             hedesundafjardenPOILayer.add(graphic);
         });
     }
-
+    //Lägga till egna markörer
     map.on("click", function (event) {
-        // Check if the click event occurred within the map's extent
+       
         if (map.extent.contains(event.mapPoint)) {
-            // Here we'll check if the clicked location already has a POI marker.
+            
             var alreadyHasPOI = false;
 
-            // We need to loop through each layer and check if there's a graphic at the event.mapPoint
             var layersToCheck = [farnebofjardenPOILayer, gysingePOILayer, hedesundafjardenPOILayer, postsLayer, slingaLayer, infoLayer];
             layersToCheck.forEach(function (layer) {
                 var graphics = layer.graphics;
@@ -444,7 +443,6 @@ require([
 
             if (!alreadyHasPOI) {
                 console.log("No POI found, adding marker.");
-                // If no POI is present at this location, add a new custom marker
                 var customMarkerSymbol = new PictureMarkerSymbol("pinpoint.png", 30, 30);
                 var clickedPoint = new Point(event.mapPoint.getLongitude(), event.mapPoint.getLatitude());
                 var customMarkerGraphic = new Graphic(clickedPoint, customMarkerSymbol);
