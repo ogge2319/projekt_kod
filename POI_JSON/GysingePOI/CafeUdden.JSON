@@ -33,14 +33,14 @@
             "lon": "16.47666",
             "name": "Ista",
             "image": "ista.png",
-            "description": "A quaint village with old charm."
+            "description": "Ett vindskydd där man kan koppla av och grilla!"
         },
         {
             "lat": "60.15747",
             "lon": "16.48537",
             "name": "Karlhomen",
             "image": "pinpoint.png",
-            "description": "A popular camping site."
+            "description": "Ett vindskydd där man kan koppla av och grilla!"
         }
     ]
 }
