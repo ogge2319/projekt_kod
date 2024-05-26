@@ -5,70 +5,70 @@
             "lon": "17.1938",
             "name": "Åshuvudet",
             "image": "ashuvudet.png",
-            "description": "A quaint little village."
+            "description": "Ett vindskydd där man kan koppla av och grilla!"
         },
         {
             "lat": "60.19891",
             "lon": "17.1291",
             "name": "Festplatsen",
             "image": "pinpoint.png",
-            "description": "A popular festival spot."
+            "description": "Ett vindskydd där man kan koppla av och grilla!"
         },
         {
             "lat": "60.20745",
             "lon": "17.3406",
             "name": "Gnupe",
             "image": "gnupe.png",
-            "description": "A great place for a hike."
+            "description": "En badplats där du kan ta ett kallt dop och sola!"
         },
         {
             "lat": "60.17909",
             "lon": "17.222",
             "name": "Hade",
             "image": "hade.png",
-            "description": "A serene lakeside location."
+            "description": "En badplats där du kan ta ett kallt dop och sola!"
         },
         {
             "lat": "60.19183",
             "lon": "17.1946",
             "name": "Korsnäset",
             "image": "korsnaset.png",
-            "description": "A lovely area for bird watching."
+            "description": "En badplats där du kan ta ett kallt dop och sola!"
         },
         {
             "lat": "60.22312",
             "lon": "17.2812",
             "name": "Kvillanudden",
             "image": "kvillanudden.png",
-            "description": "A perfect picnic spot."
+            "description": "Ett vindskydd där man kan koppla av och grilla!"
         },
         {
             "lat": "60.22302",
             "lon": "17.0000",
             "name": "Norra Sundet",
             "image": "norrasundet.png",
-            "description": "A beautiful northern bay."
+            "description": "En badplats där du kan ta ett kallt dop och sola!"
         },
         {
             "lat": "60.22987",
             "lon": "17.5701",
             "name": "Östveda",
             "image": "ostveda.png",
-            "description": "A historic site with stunning views."
+            "description": "En badplats där du kan ta ett kallt dop och sola!"
         },
         {
             "lat": "60.21013",
             "lon": "17.1919",
             "name": "Sandsnäsbadet",
             "image": "sandsnasbadet.png",
-            "description": "A popular swimming spot."
+            "description": "En badplats där du kan ta ett kallt dop och sola!"
         },
         {
             "lat": "60.1872",
             "lon": "17.2239",
             "name": "Södra Sundet",
             "image": "sodrasundet.png",
-            "description": "A scenic southern bay."
+            "description": "En badplats där du kan ta ett kallt dop och sola!"
         }
     ]
 }
