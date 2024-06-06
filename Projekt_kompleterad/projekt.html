@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektarbete</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.39/esri/css/esri.css">
+    <script src="http://js.arcgis.com/3.39/"></script>
+    <script src="projekt.js"></script>
+    <link rel="stylesheet" href="projekt.css">
+</head>
+
+<body>
+
+    <div id="viewDiv" style="width: 100%; height: 100vh;"></div>
+
+
+    <div id="menu">
+    <ul>
+        <li><a href="#"><img src="Hiking.png" alt="Hiking" style="width: 70px; height: auto;"></a>
+            <ul>
+<a href="#" id="fetchDataButton">Walking without elevation</a>
+                <a href="#" id="fetchInfoButton">Walking with elevation</a>
+<a href="#" id="fetchSligaButton">Trail without elevation</a>
+            </ul>
+        </li>
+        <li><a href="#"><img src="Biking.png" alt="Biking" style="width: 70px; height: auto;"></a>
+            <ul>
+<a href="#" id="fetchBikinWithoutButton">Biking without elevation</a>
+<a href="#" id="fetchBikingWithButton">Biking with elevation</a>
+</ul>
+        </li>
+        <li><a href="#"><img src="Canoe.png" alt="Canoe" style="width: 70px; height: auto;">
+            <ul>
+                <a href="#" id="fetchFarnebofjardenPOIButton">Farnebofjarden</a>
+<a href="#" id="fetchGysingePOIPOIButton">Gysinge</a>
+<a href="#" id="fetchHedesundafjardenPOIButton">Hedesundafjarden</a>
+            </ul>
+        </li>
+        <li><a href="#"><img src="ownpoi.png" alt="Point" style="width: 70px; height: auto;">
+            <ul>
+                <a href="#" id="addOwnPOILink">Your Own POI</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div id="poiForm" style="display:none; position:absolute; top:50px; left:50px; z-index:10; background:white; padding:10px; border:1px solid black;">
+    <h3>Add Custom POI</h3>
+    <label for="poiName">Name:</label>
+    <input type="text" id="poiName" name="poiName"><br>
+    <label for="poiDescription">Description:</label><br>
+    <textarea id="poiDescription" name="poiDescription"></textarea><br>
+    <label for="poiImage">Image URL:</label>
+    <input type="text" id="poiImage" name="poiImage"><br>
+    <button id="savePoiButton">Save POI</button>
+    <button id="cancelPoiButton">Cancel</button>
+</div>
+
+
+
+    
+    
+
+</body>
+
+</html>
